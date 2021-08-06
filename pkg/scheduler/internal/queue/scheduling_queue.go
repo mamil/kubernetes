@@ -148,6 +148,7 @@ type PriorityQueue struct {
 	unschedulableQ *UnschedulablePodsMap
 	// schedulingCycle represents sequence number of scheduling cycle and is incremented
 	// when a pod is popped.
+	// schedulingCycle是一个调度周期的递增序号，当pod pop的时候会递增
 	schedulingCycle int64
 	// moveRequestCycle caches the sequence number of scheduling cycle when we
 	// received a move request. Unschedulable pods in and before this scheduling
